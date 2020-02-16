@@ -14,7 +14,7 @@ http://www.dwenzhao.cn/cal/php/gbkunicode.php
 即：将图片转化为黑白图片，且是非黑即白，所以称为二值。黑：0 白：255 光亮度，这样可以丢弃颜色细节，方便映射到钢琴按键的按与不按两种状态
 ```python
 threshold = 200 #用于对汉字图片进行简单二值化的阈值设置，小于则认为是黑色，大于则认为是白色
-imgfile=["超.png", "宝.png", "宝.png", "和.png", "小.png", "扇.png", "子.png", "在.png", "一.png", "起.png", "一.png", "百.png",
+imgfile=[ "百.png",
            "天.png", "啦.png"]
 for k in range(0,len(imgfile)):
     img = Image.open(imgfile[k]).convert('L')#调用函数，汉字图片转成灰度图
