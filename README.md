@@ -42,7 +42,7 @@ ps: 二值化操作更好理解 ，pstest去测试一下
 ```python
  import matplotlib.pyplot as plt
  threshold = 200 #用于对汉字图片进行简单二值化的阈值设置，小于则认为是黑色，大于则认为是白色
- imgfile=["超.png", "宝.png", "宝.png", "和.png", "小.png", "扇.png", "子.png", "在.png", "一.png", "起.png", "一.png", "百.png",
+ imgfile=[  "百.png",
            "天.png", "啦.png"]
  for k in range(0,len(imgfile)):
      img = Image.open(imgfile[k]).convert('L')#调用函数，汉字图片转成灰度图
