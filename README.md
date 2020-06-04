@@ -14,8 +14,7 @@ http://www.dwenzhao.cn/cal/php/gbkunicode.php
 即：将图片转化为黑白图片，且是非黑即白，所以称为二值。黑：0 白：255 光亮度，这样可以丢弃颜色细节，方便映射到钢琴按键的按与不按两种状态
 ```python
 threshold = 200 #用于对汉字图片进行简单二值化的阈值设置，小于则认为是黑色，大于则认为是白色
-imgfile=[ "百.png",
-           "天.png", "啦.png"]
+imgfile=["天.png", "啦.png"]
 for k in range(0,len(imgfile)):
     img = Image.open(imgfile[k]).convert('L')#调用函数，汉字图片转成灰度图
     a_img = np.asarray(img,dtype="int64").copy()#调用函数，得到灰度图的像素矩阵
@@ -42,8 +41,7 @@ ps: 二值化操作更好理解 ，pstest去测试一下
 ```python
  import matplotlib.pyplot as plt
  threshold = 200 #用于对汉字图片进行简单二值化的阈值设置，小于则认为是黑色，大于则认为是白色
- imgfile=[  "百.png",
-           "天.png", "啦.png"]
+ imgfile=["天.png", "啦.png"]
  for k in range(0,len(imgfile)):
      img = Image.open(imgfile[k]).convert('L')#调用函数，汉字图片转成灰度图
      a_img = np.asarray(img,dtype="int64").copy()#调用函数，得到灰度图的像素矩阵
@@ -53,4 +51,3 @@ ps: 二值化操作更好理解 ，pstest去测试一下
          print()
      plt.imshow(img, cmap='gray')#展示汉字灰度图
 ```
-灵感来自同学的说说
